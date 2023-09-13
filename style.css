@@ -305,15 +305,6 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
     height: 20px;
   }
   .slider:before {
-    position: absolute;
-    content: "";
-    height: 1.4rem;
-    width: 1.4rem;
-    border-radius: 50%;
-    left: 10%;
-    bottom: 15%;
     box-shadow: inset 4px -4px 0px 0px #fff000;
-    background: rgb(74, 72, 72);
-    transition: 0.5s;
   }
 }
