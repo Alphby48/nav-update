@@ -52,10 +52,43 @@ nav {
   padding: 0 20px;
   z-index: 99;
 }
+nav .logo {
+  /* width: 190px;
+  height: 254px; */
+  background: rgb(146, 80, 233);
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+nav .logo::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 500px;
+  background-image: linear-gradient(
+    180deg,
+    rgb(30, 255, 0),
+    rgb(255, 255, 255)
+  );
 
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+nav .logo::after {
+  content: "";
+  position: absolute;
+  background: rgb(146, 80, 233);
+  inset: 3px;
+  border-radius: 9px;
+}
 nav .logo h1 {
   font-family: "josefinsans";
   color: #ff0000;
+  z-index: 1;
 }
 nav .navbar-nav {
   display: flex;
@@ -229,6 +262,24 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   transform: scale(0);
   opacity: 0;
 }
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media (max-width: 1160px) {
   nav .navbar-nav {
     width: 50%;
@@ -246,16 +297,17 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   html {
     font-size: 62.5%;
   }
-  nav .logo {
-    padding-left: 8.8%;
-  }
-  nav .logo img {
-    margin-right: 5px;
-    width: 25px;
-    height: 35px;
-  }
+
   nav .logo h1 {
     font-size: 1.8rem;
+  }
+  nav .logo::before {
+    width: 10px;
+    height: 500px;
+  }
+  nav .logo::after {
+    inset: 2px;
+    border-radius: 7px;
   }
   nav .icon-bar {
     display: flex;

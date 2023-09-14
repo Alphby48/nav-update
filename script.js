@@ -15,11 +15,17 @@ document.addEventListener("click", function (e) {
 });
 
 const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
-
+const tlsn = document.querySelectorAll(".font-mode");
 function switchTheme(e) {
   if (e.target.checked) {
+    for (var i = 0; i < tlsn.length; i++) {
+      tlsn[i].style.color = "white";
+    }
     document.documentElement.setAttribute("data-theme", "dark");
   } else {
+    for (var i = 0; i < tlsn.length; i++) {
+      tlsn[i].style.color = "black";
+    }
     document.documentElement.setAttribute("data-theme", "light");
   }
 }
