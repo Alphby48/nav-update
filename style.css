@@ -229,6 +229,19 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   transform: scale(0);
   opacity: 0;
 }
+@media (max-width: 1160px) {
+  nav .navbar-nav {
+    width: 50%;
+  }
+}
+@media (max-width: 936px) {
+  nav .navbar-nav {
+    width: 60%;
+  }
+  nav .navbar-nav li a {
+    font-size: 0.8rem;
+  }
+}
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
