@@ -30,6 +30,9 @@
 [data-theme="dark"] {
   --bg-color: #161625;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--bg-color);
   min-height: 2000px;
@@ -270,7 +273,7 @@ main {
 main .container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
 
   position: fixed;
@@ -296,7 +299,7 @@ main .container .main-box h1:nth-child(2) {
   font-size: 2rem;
   padding-left: 10px;
   font-family: "poppins-medium";
-  color: #ff014f;
+  color: #f3277c;
 }
 
 .type-text::after {
@@ -315,9 +318,7 @@ main .main-box p {
   width: 60%;
   line-height: 1.2;
 }
-main .main-img img {
-  width: 200px;
-}
+
 main .main-box .btn-main {
   display: flex;
   justify-content: space-between;
@@ -379,6 +380,82 @@ main .main-box .btn-main {
   scale: 0.7;
 }
 
+.card {
+  width: 190px;
+  height: 254px;
+  transition: all 0.2s;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.815);
+}
+
+.card-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(114, 134, 223, 0.623);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(35px);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 198px;
+  height: 262px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+.card:hover::before {
+  transform: rotate(-180deg);
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#b0e633, #53ef7d);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+/* main .main-img img {
+  width: 100px;
+} */
+/* Animation */
 @keyframes type {
   0% {
     opacity: 1;
@@ -399,6 +476,17 @@ main .main-box .btn-main {
 
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes move-up6 {
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(20px);
   }
 }
 @media (max-width: 1160px) {
@@ -447,7 +535,7 @@ main .main-box .btn-main {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: rgb(228, 133, 247);
+    background-color: rgb(146, 80, 233);
     width: 45%;
     height: 100vh;
     transition: 0.3s;
@@ -480,7 +568,7 @@ main .main-box .btn-main {
     top: 0;
     box-shadow: none;
     z-index: 1;
-    background-color: rgb(228, 133, 247);
+    background-color: rgb(146, 80, 233);
     line-height: 10px;
   }
   nav .navbar-nav .sb-menu i {
@@ -495,12 +583,14 @@ main .main-box .btn-main {
   }
   main .container {
     flex-direction: column-reverse;
-    top: 15%;
+    top: 13%;
   }
   main .container .main-box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
   }
   main .container .main-box .btn-main {
     width: 100%;
