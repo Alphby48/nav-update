@@ -17,18 +17,20 @@ document.addEventListener("click", function (e) {
 const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
 const tlsn = document.querySelectorAll(".font-mode");
 const main = document.querySelector("main");
+
 function switchTheme(e) {
   if (e.target.checked) {
     for (var i = 0; i < tlsn.length; i++) {
       tlsn[i].style.color = "white";
     }
-    main.style.backgroundColor = "#161625";
+    main.style.background = "#00000062";
     document.documentElement.setAttribute("data-theme", "dark");
   } else {
     for (var i = 0; i < tlsn.length; i++) {
       tlsn[i].style.color = "black";
     }
-    main.style.backgroundColor = "#302ae662";
+    main.style.background =
+      "linear-gradient(-25deg, #2ae69e54 20%, #532ae698 80%)";
     document.documentElement.setAttribute("data-theme", "light");
   }
 }

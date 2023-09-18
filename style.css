@@ -246,7 +246,9 @@ main {
   width: 100%;
   min-height: 110vh;
   display: flex;
-  background-color: #302ae662;
+
+  /* background-color: #302ae662; */
+  background: linear-gradient(-25deg, #2ae69e54 20%, #532ae698 80%);
   position: relative;
   -webkit-mask-image: linear-gradient(
     rgba(0, 0, 0, 1) 85%,
@@ -259,7 +261,8 @@ main .container {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-
+  padding: 0 4rem;
+  box-sizing: border-box;
   position: fixed;
   top: 20%;
 }
@@ -269,6 +272,7 @@ main .container .main-box {
 }
 main .container .main-box h1:nth-child(1) {
   font-family: "poppins-extrabolditalic";
+  text-shadow: 4px 4px 6px #aa3cf39d;
 }
 .wrt-txt {
   display: inline-flex;
@@ -284,6 +288,7 @@ main .container .main-box .wrt-txt .type-text {
   padding-left: 10px;
   font-family: "poppins-medium";
   color: #f3277c;
+  text-shadow: 3px 3px 5px #aa3cf39d;
 }
 
 main .container .main-box .wrt-txt .type-text::after {
@@ -301,6 +306,7 @@ main .container .main-box p {
   font-family: "poppins-medium";
   width: 60%;
   line-height: 1.2;
+  text-shadow: 3px 3px 5px #aa3cf39d;
 }
 
 main .container .main-box .btn-main {
@@ -441,6 +447,27 @@ main .container .main-img .card .circle:nth-child(2) {
   right: -25px;
   animation-name: move-down1;
 }
+/* SECTION 3 */
+.sect1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.sect1 .sect-card {
+  display: inline-flex;
+  padding-top: 2rem;
+}
+.sect1 .sect-card h2 {
+  font-family: "poppins-semibold";
+  font-size: 2.5rem;
+}
+.sect1 .sect-card span {
+  font-family: "poppins-semibold";
+  font-size: 2.5rem;
+  padding-left: 10px;
+  color: #b700ff;
+}
+
 /* main .main-img img {
   width: 100px;
 } */
@@ -599,6 +626,7 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   main .container {
     flex-direction: column-reverse;
     top: 13%;
+    padding: 0;
   }
   main .container .main-box {
     display: flex;
@@ -614,5 +642,8 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   main .container .main-box .btn-main {
     width: 100%;
     padding: 1rem 2rem;
+  }
+  .sect1 {
+    padding-top: 4rem;
   }
 }
