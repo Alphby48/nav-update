@@ -390,8 +390,9 @@ main .container .main-img .card .card-inner {
   height: inherit;
   background: rgba(114, 134, 223, 0.623);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
+  /*backdrop-filter: blur(10px);*/
   border-radius: 10px;
+  
 }
 main .container .main-img .card::after {
   content: "";
@@ -434,6 +435,7 @@ main .container .main-img .card .circle {
   background: radial-gradient(#b0e633, #53ef7d);
   border-radius: 50%;
   position: absolute;
+  z-index: -1;
   animation: move-up6 1.5s ease-in infinite alternate-reverse;
 }
 
