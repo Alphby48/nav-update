@@ -25,7 +25,7 @@
   src: url(asset/font/poppins-extrabolditalic-webfont.woff) format("woff");
 }
 :root {
-  --bg-color: #fff;
+  --bg-color: #cdd6ff;
 }
 [data-theme="dark"] {
   --bg-color: #161625;
@@ -392,7 +392,6 @@ main .container .main-img .card .card-inner {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   /*backdrop-filter: blur(10px);*/
   border-radius: 10px;
-  
 }
 main .container .main-img .card::after {
   content: "";
@@ -467,7 +466,7 @@ main .container .main-img .card .circle:nth-child(2) {
   font-family: "poppins-semibold";
   font-size: 2.5rem;
   padding-left: 10px;
-  color: #b700ff;
+  animation: title-color 1s ease-in-out infinite alternate-reverse;
 }
 
 /* main .main-img img {
@@ -489,6 +488,20 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(4) {
 nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   transform: scale(0);
   opacity: 0;
+}
+@keyframes title-color {
+  0% {
+    color: #e90b0b;
+  }
+  25% {
+    color: #ee0cd0;
+  }
+  50% {
+    color: #0011ff;
+  }
+  100% {
+    color: #00ffdd;
+  }
 }
 @keyframes btn-slide {
   100% {
