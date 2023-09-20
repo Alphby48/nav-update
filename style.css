@@ -451,12 +451,14 @@ main .container .main-img .card .circle:nth-child(2) {
 /* SECTION 3 */
 .sect1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 2rem;
 }
 .sect1 .sect-card {
   display: inline-flex;
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
 .sect1 .sect-card h2 {
   font-family: "poppins-semibold";
@@ -468,7 +470,140 @@ main .container .main-img .card .circle:nth-child(2) {
   padding-left: 10px;
   animation: title-color 1s ease-in-out infinite alternate-reverse;
 }
-
+.cont-sect1 {
+  display: flex;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+.cont-sect1 .sect1-img {
+  width: 40%;
+  padding: 0 1rem;
+}
+.cont-sect1 .sect1-img img {
+  width: 100%;
+  background-color: #00000031;
+}
+.cont-sect1 .sect1-box {
+  width: 60%;
+}
+.cont-sect1 .sect1-box .text-box {
+  width: 80%;
+  margin-bottom: 6rem;
+  padding-top: 1rem;
+}
+.cont-sect1 .sect1-box .text-box p {
+  font-family: "poppins";
+  line-height: 1.2;
+}
+.cont-sect1 .sect1-box .text-box p span {
+  font-size: 3rem;
+  color: rgb(14, 13, 13);
+  line-height: 0.5;
+}
+.cont-sect1 .sect1-box .skil-box {
+  margin-top: 2.5rem;
+}
+.cont-sect1 .sect1-box .skil-box h3 {
+  font-size: 1rem;
+  font-family: "poppins-medium";
+}
+.cont-sect1 .sect1-box .skil-box .skil {
+  width: 90%;
+  height: 15px;
+  border: 1px solid rgb(75, 71, 71);
+  border-radius: 20px;
+  background-color: #ffffff52;
+}
+.cont-sect1 .sect1-box .skil-box .skil .pers-skil {
+  background-color: #0011ff;
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+}
+.cont-sect1 .sect1-box .skil-box .skil .pers-skil::after {
+  content: "80%";
+  position: absolute;
+  right: 0;
+  top: -30px;
+  background-color: #71eff3;
+  padding: 5px;
+  border-radius: 20px;
+  font-family: "poppins";
+}
+.cont-sect1 .sect1-box .skil-box .skil .pers-skil-gd {
+  background-color: #0011ff;
+  width: 60%;
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+}
+.cont-sect1 .sect1-box .skil-box .skil .pers-skil-gd::after {
+  content: "60%";
+  position: absolute;
+  right: 0;
+  top: -30px;
+  background-color: #71eff3;
+  padding: 5px;
+  border-radius: 20px;
+  font-family: "poppins";
+}
+.cont-sect1 .sect1-box .skil-box .skil .pers-skil-net {
+  background-color: #0011ff;
+  width: 55%;
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+}
+.cont-sect1 .sect1-box .skil-box .skil .pers-skil-net::after {
+  content: "55%";
+  position: absolute;
+  right: 0;
+  top: -30px;
+  background-color: #71eff3;
+  padding: 5px;
+  border-radius: 20px;
+  font-family: "poppins";
+}
+.sect1-box .btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  left: 10%;
+  margin-top: 3rem;
+}
+.sect1-box .btn-box .butn-box {
+  color: purple;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid purple;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+.sect1-box .btn-box .butn-box:hover {
+  color: #ffffff;
+}
+.sect1-box .btn-box .butn-box::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: purple;
+  z-index: -1;
+  transition: all 1s;
+}
+.sect1-box .btn-box .butn-box:hover::before {
+  width: 160%;
+}
 /* main .main-img img {
   width: 100px;
 } */
@@ -557,6 +692,9 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   }
   nav .navbar-nav li a {
     font-size: 0.8rem;
+  }
+  main .container .main-box .btn-main {
+    width: 70%;
   }
 }
 @media (max-width: 768px) {
@@ -660,5 +798,34 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   }
   .sect1 {
     padding-top: 4rem;
+  }
+  .cont-sect1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cont-sect1 .sect1-img {
+    width: 80%;
+  }
+  .cont-sect1 .sect1-box {
+    width: 95%;
+  }
+  .cont-sect1 .sect1-box .text-box {
+    width: 100%;
+  }
+  .cont-sect1 .sect1-box .text-box p {
+    font-size: 1.5rem;
+  }
+  .cont-sect1 .sect1-box .skil-box h3 {
+    font-size: 1.2rem;
+    font-family: "poppins-medium";
+  }
+  .cont-sect1 .sect1-box .skil-box .skil .pers-skil::after,
+  .cont-sect1 .sect1-box .skil-box .skil .pers-skil-gd::after,
+  .cont-sect1 .sect1-box .skil-box .skil .pers-skil-net::after {
+    top: -24px;
+  }
+  .sect1-box .btn-box .butn-box {
+    padding: 5px 10px;
+    font-size: 13px;
   }
 }
