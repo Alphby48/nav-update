@@ -30,7 +30,7 @@ function switchTheme(e) {
       tlsn[i].style.color = "black";
     }
     main.style.background =
-      "linear-gradient(-25deg, #2ae69e54 20%, #532ae698 80%)";
+      "linear-gradient(-25deg, #462ae654 20%, #532ae698 80%)";
     document.documentElement.setAttribute("data-theme", "light");
   }
 }
