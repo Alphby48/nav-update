@@ -37,6 +37,7 @@ html {
 body {
   background-color: var(--bg-color);
   min-height: 2000px;
+  box-sizing: border-box;
 }
 nav {
   position: fixed;
@@ -486,7 +487,7 @@ main .container .main-img .card .circle:nth-child(2) {
   background-color: #00000031;
 }
 .cont-sect1 .sect1-box {
-  width: 60%;
+  width: 50%;
 }
 .cont-sect1 .sect1-box .text-box {
   width: 80%;
@@ -575,14 +576,13 @@ main .container .main-img .card .circle:nth-child(2) {
   font-family: "poppins";
 }
 .sect1-box .btn-box {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
   position: relative;
-  left: 10%;
+
   margin-top: 3rem;
+  box-sizing: border-box;
 }
 .sect1-box .btn-box .butn-box {
+  left: 10%;
   color: purple;
   text-transform: uppercase;
   text-decoration: none;
@@ -594,6 +594,7 @@ main .container .main-img .card .circle:nth-child(2) {
   position: relative;
   transition: all 1s;
   overflow: hidden;
+  border-radius: 10px;
 }
 .sect1-box .btn-box .butn-box:hover {
   color: #ffffff;
