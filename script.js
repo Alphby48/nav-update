@@ -24,13 +24,18 @@ function switchTheme(e) {
       tlsn[i].style.color = "white";
     }
     main.style.background = "#00000062";
+    main.style.backgroundImage = "url(asset/img/Wave3.svg)";
+    main.style.backgroundRepeat = "no-repeat";
+    main.style.backgroundPositionY = "100%";
     document.documentElement.setAttribute("data-theme", "dark");
   } else {
     for (var i = 0; i < tlsn.length; i++) {
       tlsn[i].style.color = "black";
     }
-    main.style.background =
-      "linear-gradient(-25deg, #462ae654 20%, #532ae698 80%)";
+    main.style.backgroundColor = "#532ae638";
+    main.style.backgroundImage = "url(asset/img/Wave3.svg)";
+    main.style.backgroundRepeat = "no-repeat";
+    main.style.backgroundPositionY = "100%";
     document.documentElement.setAttribute("data-theme", "light");
   }
 }
