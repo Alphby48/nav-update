@@ -17,11 +17,15 @@ document.addEventListener("click", function (e) {
 const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
 const tlsn = document.querySelectorAll(".font-mode");
 const main = document.querySelector("main");
+const boxEx = document.querySelectorAll(".card-ex");
 
 function switchTheme(e) {
   if (e.target.checked) {
     for (var i = 0; i < tlsn.length; i++) {
       tlsn[i].style.color = "white";
+    }
+    for (var i = 0; i < boxEx.length; i++) {
+      boxEx[i].style.boxShadow = "-40px 50px 30px rgba(146, 80, 233, 0.2)";
     }
     main.style.background = "#00000062";
     main.style.backgroundImage = "url(asset/img/Wave3.svg)";
@@ -31,6 +35,9 @@ function switchTheme(e) {
   } else {
     for (var i = 0; i < tlsn.length; i++) {
       tlsn[i].style.color = "black";
+    }
+    for (var i = 0; i < boxEx.length; i++) {
+      boxEx[i].style.boxShadow = "-40px 50px 30px rgba(0, 0, 0, 0.28)";
     }
     main.style.backgroundColor = "#532ae638";
     main.style.backgroundImage = "url(asset/img/Wave3.svg)";
