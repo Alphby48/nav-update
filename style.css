@@ -666,7 +666,7 @@ main .container .main-img .card .circle:nth-child(2) {
   transition: 0.4s;
   overflow: hidden;
   color: white;
-  margin-bottom: 3rem;
+  margin: 3rem 1rem;
 }
 
 .card-ex:hover {
@@ -738,6 +738,87 @@ main .container .main-img .card .circle:nth-child(2) {
   font-family: "poppins-talic";
 }
 
+/* SECTION 2i */
+.sect-2i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+.title-sect {
+  display: inline-flex;
+  padding: 2rem 0;
+}
+.title-sect span {
+  font-family: "poppins-semibold";
+  font-size: 2.5rem;
+  animation: title-color 1s ease-in-out infinite alternate-reverse;
+}
+.title-sect h1 {
+  font-family: "poppins-semibold";
+  padding-left: 10px;
+  font-size: 2.5rem;
+  text-shadow: 4px 4px 4px #3c4ef375;
+}
+.skils-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container-skil {
+  display: flex;
+
+  padding: 2rem;
+  border-radius: 8px;
+  transition: all 500ms;
+  row-gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+.container-skil:hover {
+  transform: translateY(-20px);
+}
+.container-skil:hover .text-skil {
+  transform: scale(1.1, 1.1);
+}
+.circular-progress {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#2a16e0 324deg, #edededbe 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pv2 {
+  background: conic-gradient(#2a16e0 288deg, #edededbe 0deg);
+}
+.pv3 {
+  background: conic-gradient(#2a16e0 162deg, #edededbe 0deg);
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.progress-value {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #7d2ae8;
+}
+.text-skil {
+  font-size: 1.5rem;
+  font-family: "poppins-semibold";
+  text-shadow: 2px 2px 2px #3c4ef375;
+  transition: all 300ms;
+}
 /* main .main-img img {
   width: 100px;
 } */
@@ -972,9 +1053,9 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   .sect2 .boxing {
     width: 90%;
   }
-  .card-ex {
+  /* .card-ex {
     margin: 3rem 1rem;
-  }
+  } */
   /* .card-ex:hover {
     height: 254px;
     transform: skew(0deg);
@@ -993,6 +1074,9 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   }
   .card-ex .link-ex a {
     font-size: 1.3rem;
+  }
+  .sect-2i {
+    padding: 4.2rem 0;
   }
 }
 
