@@ -739,7 +739,8 @@ main .container .main-img .card .circle:nth-child(2) {
 }
 
 /* SECTION 2i */
-.sect-2i {
+.sect-2i,
+.sect-3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -749,6 +750,8 @@ main .container .main-img .card .circle:nth-child(2) {
 .title-sect {
   display: inline-flex;
   padding: 2rem 0;
+  justify-content: center;
+  width: 100%;
 }
 .title-sect span {
   font-family: "poppins-semibold";
@@ -818,6 +821,16 @@ main .container .main-img .card .circle:nth-child(2) {
   font-family: "poppins-semibold";
   text-shadow: 2px 2px 2px #3c4ef375;
   transition: all 300ms;
+}
+/* SECTION 3 */
+.sect-3 .img-prj {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.sect-3 .img-prj img {
+  width: 500px;
+  padding: 2rem;
 }
 /* main .main-img img {
   width: 100px;
