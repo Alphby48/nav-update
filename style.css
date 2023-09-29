@@ -1091,6 +1091,10 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   .sect-2i {
     padding: 4.2rem 0;
   }
+  .sect-3 .img-prj img {
+    width: 300px;
+    padding: 2rem;
+  }
 }
 
 /*clearfix*/
