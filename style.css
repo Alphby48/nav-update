@@ -823,14 +823,54 @@ main .container .main-img .card .circle:nth-child(2) {
   transition: all 300ms;
 }
 /* SECTION 3 */
+.sect-3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* box-sizing: border-box;
+  width: 100%; */
+}
 .sect-3 .img-prj {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 100%;
 }
-.sect-3 .img-prj img {
-  width: 500px;
-  padding: 2rem;
+.sect-3 .img-prj .img-box-prj {
+  width: 400px;
+  margin: 2rem;
+  background-color: #5df0952c;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: crosshair;
+}
+.sect-3 .img-prj .img-box-prj:hover::after {
+  content: "Emphere Cafe";
+  position: absolute;
+  background-color: #cf67ff;
+  padding: 1rem;
+  font-size: 1.1rem;
+  top: -3.2rem;
+  animation: prj 500ms backwards;
+  border-radius: 20px;
+  color: #ffffff;
+}
+.sect-3 .img-prj .img-box-prj:nth-child(2):hover::after {
+  content: "Katik";
+}
+.sect-3 .img-prj .img-box-prj:nth-child(3):hover::after {
+  content: "JKT48 Website";
+}
+.sect-3 .img-prj .img-box-prj img {
+  width: 100%;
+}
+.sect-3 .img-prj .img-box-prj .txt-prj {
+  text-align: center;
+  padding: 1.2rem 0;
 }
 /* main .main-img img {
   width: 100px;
@@ -851,6 +891,14 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(4) {
 nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   transform: scale(0);
   opacity: 0;
+}
+@keyframes prj {
+  0% {
+    top: 20px;
+  }
+  100% {
+    top: -3.2rem;
+  }
 }
 @keyframes title-color {
   0% {
@@ -923,6 +971,10 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   }
   main .container .main-box .btn-main {
     width: 70%;
+  }
+  .sect-3 .img-prj .img-box-prj {
+    width: 350px;
+    margin: 2rem 0;
   }
 }
 @media (max-width: 768px) {
@@ -1091,12 +1143,12 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   .sect-2i {
     padding: 4.2rem 0;
   }
-  .sect-3 .img-prj img {
+
+  .sect-3 .img-prj .img-box-prj {
     width: 300px;
-    padding: 2rem;
+    margin: 2rem 0;
   }
 }
-
 /*clearfix*/
 
 .cf:before,
