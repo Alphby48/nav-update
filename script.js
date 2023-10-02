@@ -149,3 +149,11 @@ function animateCircles() {
 }
 
 animateCircles();
+
+//
+const csrWarna = document.querySelector(".sect-3");
+csrWarna.addEventListener("mousemove", function (event) {
+  const xPost = Math.round((event.clientX / window.innerWidth) * 255);
+  const yPost = Math.round((event.clientY / window.innerWidth) * 255);
+  csrWarna.style.backgroundColor = "rgba(" + xPost + "," + yPost + ", 100,.2 )";
+});
