@@ -157,3 +157,22 @@ csrWarna.addEventListener("mousemove", function (event) {
   const yPost = Math.round((event.clientY / window.innerWidth) * 255);
   csrWarna.style.backgroundColor = "rgba(" + xPost + "," + yPost + ", 100,.2 )";
 });
+
+//
+const web = document.querySelector(".option .web");
+const game = document.querySelector(".option .game");
+const imgPrj = document.querySelectorAll(".wb");
+const imgGm = document.getElementById("bx-game");
+game.addEventListener("click", function () {
+  for (let i = 0; i < imgPrj.length; i++) {
+    imgPrj[i].style.display = "none";
+  }
+  imgGm.style.display = "flex";
+});
+
+web.addEventListener("click", function () {
+  for (let i = 0; i < imgPrj.length; i++) {
+    imgPrj[i].style.display = "flex";
+  }
+  imgGm.style.display = "none";
+});
