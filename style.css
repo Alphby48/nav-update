@@ -853,6 +853,13 @@ main .container .main-img .card .circle:nth-child(2) {
   cursor: pointer;
   margin-bottom: 0;
 }
+.sect-3 .option h4:hover {
+  color: #00ff22;
+}
+.sect-3 .option h4:active {
+  color: #00ffdd;
+  scale: 0.9;
+}
 .sect-3 .option .web {
   padding: 0.4rem 0.4rem 0.2rem 0.4rem;
   background-color: #ce44e95e;
@@ -907,6 +914,9 @@ main .container .main-img .card .circle:nth-child(2) {
 }
 .sect-3 .img-prj .c:hover::after {
   content: "JKT48 Website";
+}
+.sect-3 .img-prj .d:hover::after {
+  content: "Suwit Jawa";
 }
 .sect-3 .img-prj .img-box-prj img {
   width: 100%;
