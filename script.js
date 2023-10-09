@@ -180,3 +180,21 @@ web.addEventListener("click", function (event) {
   event.target.nextElementSibling.style.backgroundColor = "transparent";
   event.target.style.backgroundColor = "#ce44e95e";
 });
+
+// loding
+const load = document.querySelector(".load");
+window.addEventListener("load", function () {
+  load.style.display = "none";
+});
+//
+const form = document.querySelector(".ctc-box form");
+const imgClk = document.querySelector(".ctc-box img");
+imgClk.addEventListener("click", function () {
+  // form.classList.toggle("display");
+  form.style.display = "flex";
+});
+
+imgClk.addEventListener("dblclick", function () {
+  // form.classList.toggle("display");
+  form.style.display = "none";
+});
