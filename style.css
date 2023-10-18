@@ -874,7 +874,7 @@ main .container .main-img .card .circle:nth-child(2) {
   background: conic-gradient(#2a16e0 288deg, #edededbe 0deg);
 }
 .pv3 {
-  background: conic-gradient(#2a16e0 162deg, #edededbe 0deg);
+  background: conic-gradient(#2a16e0 234deg, #edededbe 0deg);
 }
 
 .circular-progress::before {
