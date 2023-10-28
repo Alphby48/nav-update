@@ -928,13 +928,14 @@ main .container .main-img .card .circle:nth-child(2) {
   color: #00ffdd;
   scale: 0.9;
 }
-.sect-3 .option .web {
+.sect-3 .option .all {
   padding: 0.4rem 0.4rem 0.2rem 0.4rem;
   background-color: #ce44e95e;
   border-radius: 15px;
 }
 .sect-3 .option .game,
-.app-web {
+.app-web,
+.web {
   padding: 0.4rem 0.4rem 0.29rem 0.4rem;
 
   border-radius: 15px;
@@ -958,7 +959,7 @@ main .container .main-img .card .circle:nth-child(2) {
   cursor: crosshair;
 }
 #bx-game {
-  display: none;
+  display: flex;
   text-decoration: none;
   color: #000000;
 }
@@ -984,6 +985,15 @@ main .container .main-img .card .circle:nth-child(2) {
   content: "JKT48 Website";
 }
 .sect-3 .img-prj .d:hover::after {
+  content: "Bookshelf Apps";
+}
+.sect-3 .img-prj .e:hover::after {
+  content: "WNews";
+}
+.sect-3 .img-prj .f:hover::after {
+  content: "Todo List";
+}
+.sect-3 .img-prj .g:hover::after {
   content: "Suwit Jawa";
 }
 .sect-3 .img-prj .img-box-prj img {

@@ -32,7 +32,7 @@ function switchTheme(e) {
     main.style.backgroundImage = "url(asset/img/Wave3.svg)";
     main.style.backgroundRepeat = "no-repeat";
     main.style.backgroundPositionY = "100%";
-    document.documentElement.setAttribute("data-theme", "dark");
+    document.body.setAttribute("data-theme", "dark");
   } else {
     for (var i = 0; i < tlsn.length; i++) {
       tlsn[i].style.color = "black";
@@ -44,7 +44,7 @@ function switchTheme(e) {
     main.style.backgroundImage = "url(asset/img/Wave3.svg)";
     main.style.backgroundRepeat = "no-repeat";
     main.style.backgroundPositionY = "100%";
-    document.documentElement.setAttribute("data-theme", "light");
+    document.body.setAttribute("data-theme", "light");
   }
 }
 toggleSwitch.addEventListener("change", switchTheme, false);
@@ -164,6 +164,29 @@ const web = document.querySelector(".option .web");
 const game = document.querySelector(".option .game");
 const imgPrj = document.querySelectorAll(".img-prj a");
 const imgGm = document.getElementById("bx-game");
+const imgWeb = document.querySelectorAll(".w");
+const imgApps = document.querySelectorAll(".aw");
+const all = document.querySelector(".option .all");
+const apps = document.querySelector(".option .app-web");
+all.addEventListener("click", function (event) {
+  for (let i = 0; i < imgPrj.length; i++) {
+    imgPrj[i].style.display = "flex";
+  }
+  event.target.style.backgroundColor = "#ce44e95e";
+  event.target.nextElementSibling.style.backgroundColor = "transparent";
+  event.target.nextElementSibling.nextElementSibling.style.backgroundColor =
+    "transparent";
+  event.target.nextElementSibling.nextElementSibling.nextElementSibling.style.backgroundColor =
+    "transparent";
+
+  document.querySelector(".txpr1").innerText = "Project 1";
+  document.querySelector(".txpr2").innerText = "Project 2";
+  document.querySelector(".txpr3").innerText = "Project 3";
+  document.querySelector(".txpr4").innerText = "Project 4";
+  document.querySelector(".txpr5").innerText = "Project 5";
+  document.querySelector(".txpr6").innerText = "Project 6";
+  document.querySelector(".txpr7").innerText = "Project 7";
+});
 game.addEventListener("click", function (e) {
   for (let i = 0; i < imgPrj.length; i++) {
     imgPrj[i].style.display = "none";
@@ -171,15 +194,49 @@ game.addEventListener("click", function (e) {
   imgGm.style.display = "flex";
   e.target.previousElementSibling.style.backgroundColor = "transparent";
   e.target.style.backgroundColor = "#ce44e95e";
+  e.target.previousElementSibling.previousElementSibling.style.backgroundColor =
+    "transparent";
+  e.target.nextElementSibling.style.backgroundColor = "transparent";
+
+  document.querySelector(".txpr7").innerText = "Project 1";
 });
 
 web.addEventListener("click", function (event) {
   for (let i = 0; i < imgPrj.length; i++) {
-    imgPrj[i].style.display = "flex";
+    imgPrj[i].style.display = "none";
+  }
+  for (let i = 0; i < imgWeb.length; i++) {
+    imgWeb[i].style.display = "flex";
   }
   imgGm.style.display = "none";
   event.target.nextElementSibling.style.backgroundColor = "transparent";
   event.target.style.backgroundColor = "#ce44e95e";
+  event.target.previousElementSibling.style.backgroundColor = "transparent";
+  event.target.nextElementSibling.nextElementSibling.style.backgroundColor =
+    "transparent";
+
+  document.querySelector(".txpr3").innerText = "Project 2";
+  document.querySelector(".txpr5").innerText = "Project 3";
+});
+
+apps.addEventListener("click", function (e) {
+  for (let i = 0; i < imgPrj.length; i++) {
+    imgPrj[i].style.display = "none";
+  }
+  for (let i = 0; i < imgApps.length; i++) {
+    imgApps[i].style.display = "flex";
+  }
+  imgGm.style.display = "none";
+  e.target.style.backgroundColor = "#ce44e95e";
+  e.target.previousElementSibling.style.backgroundColor = "transparent";
+  e.target.previousElementSibling.previousElementSibling.style.backgroundColor =
+    "transparent";
+  e.target.previousElementSibling.previousElementSibling.previousElementSibling.style.backgroundColor =
+    "transparent";
+
+  document.querySelector(".txpr2").innerText = "Project 1";
+  document.querySelector(".txpr4").innerText = "Project 2";
+  document.querySelector(".txpr6").innerText = "Project 3";
 });
 
 // loding
