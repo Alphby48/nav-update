@@ -20,8 +20,10 @@ const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
 function switchTheme(e) {
   if (e.target.checked) {
     document.body.setAttribute("data-theme", "dark");
+    document.querySelector(".font-mode").style.color = "white";
   } else {
     document.body.setAttribute("data-theme", "light");
+    document.querySelector(".font-mode").style.color = "black";
   }
 }
 toggleSwitch.addEventListener("change", switchTheme, false);
