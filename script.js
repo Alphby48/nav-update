@@ -53,7 +53,7 @@ toggleSwitch.addEventListener("change", switchTheme, false);
 
 const type = document.querySelector(".type-text");
 
-let listTexts = ["Web Developer", "FE Developer", "Freelancer"];
+let listTexts = ["Web Development", "Ethical Hacking", "Designer"];
 
 let index = -1;
 let current = 0;
